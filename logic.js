@@ -1,5 +1,6 @@
 let buttons = document.querySelectorAll("button"); // targeting all the buttons 
 let playerChecker = true; // for alternating X and O
+let winCard = document.getElementById('win'); // targeting the p tag for the win card
 
 let dataArray = Array(9).fill(null);
 
@@ -42,9 +43,12 @@ buttons.forEach(btn=>{
             playerChecker = !playerChecker;
             let id = e.target.id;
             dataArray[id] = e.target.innerText;
-            console.log(dataArray);
+            // console.log(dataArray);
             let check = winCheck();
-            console.log(check);
+            // console.log(check);
+            if (check){
+                winCard.innerText = `Winner : ${check}`
+            }
         }
     })
 })
