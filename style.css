@@ -1,8 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
 *{
     margin: 0;
     padding: 0;
+    font-family: 'google sans';
+}
+
+h1{
+    font-size: 3rem;
+}
+
+#win{
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+body{
+    background-color: rgb(156, 0, 76);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+}
+#board{
+    height: 45vmin;
+    width: 45vmin;
+    border: 10px dashed white;
+}
+.btn-row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 button{
-    height: 10vh;
-    width: 10vw;
+    height: 15vmin;
+    width: 15vmin;
+    background-color: yellowgreen;
+    font-size: 2rem;
+    font-weight: 900;
+    /* box-sizing: border-box; */
+    color: white;
+    font-family: 'google sans';
+    margin: 0;
+    border-style: dashed;
+    border-color: white;
 }
