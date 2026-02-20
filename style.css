@@ -7,6 +7,7 @@
 
 h1{
     font-size: 3rem;
+    text-shadow: 5px 10px 15px black;
 }
 
 #win{
@@ -15,7 +16,9 @@ h1{
 }
 
 body{
-    background-color: rgb(156, 0, 76);
+    /* background-color: rgb(156, 0, 76); */
+    /* background: linear-gradient(salmon,red); */
+    background-color: #000;
     height: 100vh;
     width: 100vw;
     display: flex;
@@ -37,7 +40,9 @@ body{
 button{
     height: 15vmin;
     width: 15vmin;
-    background-color: yellowgreen;
+    /* background-color: yellow; */
+    /* background: linear-gradient(yellow,yellowgreen,yellow); */
+    background-color: #333333;
     font-size: 2rem;
     font-weight: 900;
     /* box-sizing: border-box; */
