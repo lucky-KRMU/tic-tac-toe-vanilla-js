@@ -4,6 +4,9 @@ let winCard = document.getElementById('win'); // targeting the p tag for the win
 
 let dataArray = Array(9).fill(null);
 
+let playCount = 0;
+let gameOver = false;
+
 
 const winCheck = () =>{
     let winCheckPara = [
@@ -19,9 +22,14 @@ const winCheck = () =>{
 
     for (let i=0; i<winCheckPara.length; i++){
         const [a, b, c] = winCheckPara[i];
-        if (dataArray[a] && dataArray[a] == dataArray[b] && dataArray[a] == dataArray[c]){
+        if (dataArray[a] && dataArray[a] == dataArray[b] && dataArray[a] == dataArray[c] && playCount<9){
+            gameOver = true;
+            setTimeout(()=>{
+                alert("The site will now reload")
+                location.reload();
+            }, 2000)
             return dataArray[a];
-        }
+        } 
 
     }
     return null;
@@ -41,6 +49,7 @@ buttons.forEach(btn=>{
                 e.target.innerText = "O"
             }
             playerChecker = !playerChecker;
+            playCount+=1;
             let id = e.target.id;
             dataArray[id] = e.target.innerText;
             // console.log(dataArray);
@@ -49,6 +58,12 @@ buttons.forEach(btn=>{
             if (check){
                 winCard.innerText = `Winner : ${check}`
             }
+        }
+        if(playCount==9 && !gameOver){
+            winCard.innerText = "It's a draw";
+            setTimeout(()=>{
+                location.reload();
+            }, 2000)
         }
     })
 })
